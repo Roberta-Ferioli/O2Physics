@@ -664,7 +664,7 @@ struct nucleiSpectra {
       }
       if (c.fillDCAHist) {
         for (int iS{0}; iS < nuclei::species; ++iS) {
-          if (c.flags & BIT(iS) ) {
+          if (c.flags & BIT(iS)) {
             nuclei::hDCAHists[c.pt < 0][iS]->Fill(std::abs(c.pt), c.DCAxy, c.DCAz, c.nSigmaTPC[iS], c.tofMasses[iS], c.ITSnCls, c.TPCnCls);
           }
         }
@@ -761,7 +761,7 @@ struct nucleiSpectra {
             nuclei::hMomRes[iS][particle.pdgCode() < 0]->Fill(1., std::abs(c.pt * nuclei::charges[iS]), 1. - std::abs(c.pt * nuclei::charges[iS]) / particle.pt());
             storeIt = cfgTreeConfig->get(iS, 0u) || cfgTreeConfig->get(iS, 1u); /// store only the particles of interest
           }
-          if (c.fillDCAHist && cfgDCAHists->get(iS, c.pt < 0) && particle.isPhysicalPrimary()) { 
+          if (c.fillDCAHist && cfgDCAHists->get(iS, c.pt < 0) && particle.isPhysicalPrimary()) {
             nuclei::hDCAHists[c.pt < 0][iS]->Fill(std::abs(c.pt), c.DCAxy, c.DCAz, c.nSigmaTPC[iS], c.tofMasses[iS], c.ITSnCls, c.TPCnCls);
           }
         }
