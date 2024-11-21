@@ -224,10 +224,10 @@ o2physics_add_dpl_workflow(tree-creator-lb-to-lc-pi
                     PUBLIC_LINK_LIBRARIES O2Physics::AnalysisCore
                     COMPONENT_NAME Analysis)
 
-o2physics_add_dpl_workflow(tree-creator-lc-to-k0s-p
-                    SOURCES treeCreatorLcToK0sP.cxx
-                    PUBLIC_LINK_LIBRARIES O2Physics::AnalysisCore
-                    COMPONENT_NAME Analysis)
+#o2physics_add_dpl_workflow(tree-creator-lc-to-k0s-p
+                    #SOURCES treeCreatorLcToK0sP.cxx
+                    #PUBLIC_LINK_LIBRARIES O2Physics::AnalysisCore
+                    #COMPONENT_NAME Analysis)
 
 o2physics_add_dpl_workflow(tree-creator-lc-to-p-k-pi
                     SOURCES treeCreatorLcToPKPi.cxx
